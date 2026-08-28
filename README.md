@@ -1,6 +1,6 @@
 # INDI Python Utils
 
-Python scripts for image capture with ZWO ASI cameras, currently tailored ASI 120 MM
+Python scripts for image capture with ZWO ASI cameras, currently tailored for an ASI 120 MM webcam.
 
 Copyright 2026 Martin Junius
 
@@ -15,14 +15,6 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
-
-## References
-
-Based on the following code examples for PyIndi:
-
-https://github.com/indilib/pyindi-client/tree/master/examples \
-https://github.com/jkoenig72/indiCapture
 
 
 ## Installation
@@ -51,7 +43,7 @@ sudo apt-get install python3-opencv
 sudo apt-get install python3-numpy
 ```
 
-For native control of ASI camera install the PyZWOASI package, the one at PyPI seems to be outdated.
+For native control of ASI camera install the PyZWOASI package, the one at PyPI seems to be outdated. Download from https://github.com/fmargall/pyzwoasi/releases
 ```
 pip install ./packages/pyzwoasi-0.2.6-py3-none-any.whl
 ```

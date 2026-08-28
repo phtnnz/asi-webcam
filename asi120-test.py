@@ -137,6 +137,8 @@ def main():
     if (n_cameras == 0):
         error("No ASI cameras connected")
     ic_info()
+    for idx in range(0, n_cameras):
+        verbose(f"camera {idx}: {pyzwoasi.getCameraProperty(idx).Name.decode('utf-8')}")
 
     # Only work with 1st camera (0)
     with ZWOCamera(0) as camera:

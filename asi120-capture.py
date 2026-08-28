@@ -125,15 +125,16 @@ def main():
         ic(imgdata)
 
         # Evaluate data
-        mean = np.average(imgdata)
-        min  = np.min(imgdata)
-        max  = np.max(imgdata)
-        ic(mean, min, max)
+        avg = np.average(imgdata)
+        min = np.min(imgdata)
+        max = np.max(imgdata)
+        ic(avg, min, max)
+        height, width = imgdata.shape
+        verbose(f"image {Options.image}: {width}x{height}, avg={avg:.1f}, min={min}, max={max}")
 
         # add date
         font = cv2.FONT_HERSHEY_SIMPLEX
-        # FIXME: position (360, 400) is very camera / binning specific!
-        cv2.putText(imgdata, time.strftime(TIME_FORMAT), (360,460), font, .6, (255), 1, cv2.LINE_AA)
+        cv2.putText(imgdata, time.strftime(TIME_FORMAT), (20, height-20), font, 1.2/Options.binning, (255), 1, cv2.LINE_AA)
 
         cv2.imwrite(Options.image, imgdata)
 

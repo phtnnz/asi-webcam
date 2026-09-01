@@ -15,10 +15,10 @@
 # limitations under the License.
 
 # ChangeLog
-# Version 0.1 / 2026-06-28
-#       Single capture script for PyZWOASI and ASI 120 MM
+# Version 0.1 / 2026-08-28
+#       Single capture script for PyZWOASI and ASI120MM
 
-VERSION = "0.1 / 2026-06-28"
+VERSION = "0.1 / 2026-08-28"
 AUTHOR  = "Martin Junius"
 NAME    = "asi120-capture"
 DESC    = "PyZWOASI capture for ASI120MM"

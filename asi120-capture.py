@@ -20,7 +20,7 @@
 
 VERSION = "0.1 / 2026-06-28"
 AUTHOR  = "Martin Junius"
-NAME    = "asi120-test"
+NAME    = "asi120-capture"
 DESC    = "PyZWOASI capture for ASI120MM"
 
 # Standard library

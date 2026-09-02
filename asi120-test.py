@@ -16,7 +16,7 @@
 
 # ChangeLog
 # Version 0.1 / 2026-06-28
-#       Test script for PyZWOASI and ASI 120 MM
+#       Test script for PyZWOASI and ASI120MM
 
 VERSION = "0.1 / 2026-06-28"
 AUTHOR  = "Martin Junius"
@@ -26,7 +26,6 @@ DESC    = "PyZWOASI test for ASI120MM"
 # Standard library
 import sys
 import argparse
-import time
 
 # Extra modules, not part of standard library, on Ubuntu install via apt-get or pip
 import cv2

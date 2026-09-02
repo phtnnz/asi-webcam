@@ -152,7 +152,7 @@ def auto_exposure(camera):
                     camera.exposure = MINEXP # just to be sure
                     ic("already at MINEXP")
                     break;
-                new_exp = camera.exposure / (1.4 if last_exp_inc else 2)
+                new_exp = camera.exposure / (1.2 if last_exp_inc else 1.4)
                 if new_exp < MINEXP:
                     new_exp = MINEXP
                 camera.exposure = int(new_exp)
@@ -173,7 +173,7 @@ def auto_exposure(camera):
                     camera.exposure = MAXEXP # just to be sure
                     ic("alreay at MAXEXP")
                     break;
-                new_exp = camera.exposure * (1.4 if last_exp_dec else 2)
+                new_exp = camera.exposure * (1.2 if last_exp_dec else 1.4)
                 if new_exp > MAXEXP:
                     new_exp = MAXEXP
                 camera.exposure = int(new_exp)

@@ -1,4 +1,4 @@
-# INDI Python Utils
+# ASI Webcam Python Utils
 
 Python scripts for image capture with ZWO ASI cameras, currently tailored for an ASI 120 MM webcam.
 
@@ -93,3 +93,63 @@ Logfiles can be found under ```~/.ZWO/asicamerasdk/```.
 #### INDI Config ####
 
 ASI 120 MM camera specific configuration can be found here ```~/.indi/ZWO CCD ASI120MM_config.xml```
+
+
+## Scripts
+
+All scripts currently ignore the OFFSET option, as PyZWOASI's ZWOCamera class doesn't support it yet.
+
+
+### asi120-capture
+
+```
+sage: asi120-capture [-h] [-v] [-d] [-c CAMERA] [-g GAIN] [-o OFFSET] [-b BINNING] [-e EXPOSURE] [-i IMAGE]
+
+PyZWOASI capture for ASI120MM
+
+options:
+  -h, --help            show this help message and exit
+  -v, --verbose         verbose messages
+  -d, --debug           more debug messages
+  -c CAMERA, --camera CAMERA
+                        camera index (default: 0)
+  -g GAIN, --gain GAIN  camera gain (default: 0)
+  -o OFFSET, --offset OFFSET
+                        camera offset (default: 0)
+  -b BINNING, --binning BINNING
+                        camera binning, 1 (1x1) or 2 (2x2) (default: 2)
+  -e EXPOSURE, --exposure EXPOSURE
+                        camera exposure time/s (default: 0.1)
+  -i IMAGE, --image IMAGE
+                        image filename (default: image.jpg)
+
+Version 0.1 / 2026-08-28 / Martin Junius
+```
+
+
+### asi120-auto
+
+```
+usage: asi120-auto [-h] [-v] [-d] [-c CAMERA] [-g GAIN] [-o OFFSET] [-b BINNING] [-e EXPOSURE] [-i IMAGE] [-l LOOP]
+
+PyZWOASI auto capture webcam for ASI120MM
+
+options:
+  -h, --help            show this help message and exit
+  -v, --verbose         verbose messages
+  -d, --debug           more debug messages
+  -c CAMERA, --camera CAMERA
+                        camera index (default: 0)
+  -g GAIN, --gain GAIN  camera gain (default: 0)
+  -o OFFSET, --offset OFFSET
+                        camera offset (default: 0)
+  -b BINNING, --binning BINNING
+                        camera binning, 1 (1x1) or 2 (2x2) (default: 2)
+  -e EXPOSURE, --exposure EXPOSURE
+                        camera exposure time/s (default: 0.1)
+  -i IMAGE, --image IMAGE
+                        image filename (default: image.jpg)
+  -l LOOP, --loop LOOP  loop exposure, interval LOOP s
+
+Version 0.1 / 2026-09-01 / Martin Junius
+```

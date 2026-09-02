@@ -1,0 +1,7 @@
+#!/bin/sh
+
+DEST=/home/qhy5lii/asi-webcam
+mkdir -p $DEST
+
+cp asi120-auto.py verbose.py run $DEST
+ls -l $DEST

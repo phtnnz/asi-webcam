@@ -1,0 +1,12 @@
+[Unit]
+Description=ASI120 Webcam (User qhy5lii)
+After=network-online.target
+
+[Service]
+Type=simple
+User=qhy5lii
+WorkingDirectory=/home/qhy5lii/asi-webcam
+ExecStart=/home/qhy5lii/asi-webcam/run
+
+[Install]
+WantedBy=multi-user.target
